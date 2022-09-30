@@ -1,0 +1,74 @@
+#include <iostream>
+#include <string>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+    float num1, num2, operasi, result;
+
+    cout << "Kalkulator Sederhana" << endl;
+    cout << "Pilih menu yang anda inginkan dengan menuliskan angkanya" << endl;
+    cout << "1. Penjumlahan \n2. Pengurangan \n3. Perkalian \n4. Pembagian \n5. Modulus \n6. Kuadrat \n7. Akar" << endl;
+
+    cin >> operasi;
+
+    while (operasi < 1 || operasi > 7)
+    {
+        cout << "Input operasi salah. Silahkan input kembali." << endl;
+        cin >> operasi;
+    }
+
+    if (operasi == 7)
+    {
+        cout << "Masukkan bilangan: ";
+        cin >> num1;
+    }
+    else
+    {
+        cout << "Masukkan bilangan 1: ";
+        cin >> num1;
+        cout << "Masukkan bilangan 2: ";
+        cin >> num2;
+    }
+
+    if (operasi == 1)
+    {
+        result = num1 + num2;
+        cout << "Hasil dari " << num1 << " + " << num2 << " = " << result;
+    }
+    else if (operasi == 2)
+    {
+        result = num1 - num2;
+        cout << "Hasil dari " << num1 << " - " << num2 << " = " << result;
+    }
+    else if (operasi == 3)
+    {
+        result = num1 * num2;
+        cout << "Hasil dari " << num1 << " * " << num2 << " = " << result;
+    }
+    else if (operasi == 4)
+    {
+        result = num1 / num2;
+        cout << "Hasil dari " << num1 << " / " << num2 << " = " << result;
+    }
+    else if (operasi == 5)
+    {
+        int a = (int)num1;
+        int b = (int)num2;
+        result = a % b;
+        cout << "Hasil dari " << num1 << " mod " << num2 << " = " << result;
+    }
+    else if (operasi == 6)
+    {
+        result = num1 * num1 * num1;
+        cout << "Hasil dari " << num1 << " ^ " << num2 << " = " << result;
+    }
+    else if (operasi == 7)
+    {
+        result = sqrt(num1);
+        cout << "Hasil dari square root(" << num1 << ") = " << result;
+    }
+
+    return 0;
+}
